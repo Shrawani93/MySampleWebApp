@@ -4,7 +4,7 @@
     "description": "My Sample Web App",
     "main": "index.js",
     "scripts": {
-      "build": "mkdir -p build && cp -r * build/"
+      "build": "powershell -Command \"if (!(Test-Path build)) { New-Item -ItemType Directory -Path build }; Copy-Item -Path *.html, *.css, *.js -Destination build\""
     },
     "author": "",
     "license": "ISC"
